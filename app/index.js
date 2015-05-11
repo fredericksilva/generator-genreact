@@ -84,6 +84,10 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('.eslintignore')
       );
       this.fs.copy(
+        this.templatePath('eslintignore'),
+        this.destinationPath('.gitignore')
+      );
+      this.fs.copy(
         this.templatePath('_jest-preprocessor.js'),
         this.destinationPath('jest-preprocessor.js')
       );
